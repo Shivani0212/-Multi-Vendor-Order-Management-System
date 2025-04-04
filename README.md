@@ -99,20 +99,28 @@ You're building the backend for a **Multi-Vendor Order Management System**, wher
 ```bash
 git clone https://github.com/Shivani0212/-Multi-Vendor-Order-Management-System.git
 
-2. Install Dependencies
+---
 
+### 2. Install Dependencies
+```bash 
 npm install
 
-3. Environment Variables
+---
+
+### 3. Environment Variables
 Create a .env file at the root of the project and add:
 PORT=
 MONGODB_URI=
 JWT_SECRET=
 
-4. Run Server
+---
+
+### 4. Run Server
 npm run dev
 
-API Testing
+---
+
+### API Testing
 Postman Collection included in:
 /postman/collection.json
 Use Postman to test:
