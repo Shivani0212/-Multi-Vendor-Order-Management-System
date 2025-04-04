@@ -4,7 +4,7 @@ const Product = require("../models/product.model");
 //Create Product API
 exports.createProduct = async (req, res) => {
   try {
-    console.log("Received Request Body:", req.body); // Debugging Log
+    //console.log("Received Request Body:", req.body); // Debugging Log
 
     // Check if `req.body` exists and contains all required fields
     const { name, price, stock, category } = req.body;

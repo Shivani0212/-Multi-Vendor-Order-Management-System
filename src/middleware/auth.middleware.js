@@ -14,7 +14,7 @@ module.exports = async (req, res, next) => {
 
     // Verify Token
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
-    console.log("Decoded Token:", decoded);
+    //console.log("Decoded Token:", decoded);
 
     if (!decoded.id) {  // Ensure correct field
       return res.status(401).json({ error: "Unauthorized: Token missing user ID." });

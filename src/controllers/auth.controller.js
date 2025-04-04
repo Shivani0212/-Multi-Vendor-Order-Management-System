@@ -31,8 +31,8 @@ exports.login = async (req, res) => {
             return res.status(400).json({ error: "User not found" });
         }
 
-        console.log("Stored Hashed Password:", user.password); // Debugging
-        console.log("User Input Password:", password); // Debugging
+        //console.log("Stored Hashed Password:", user.password); // Debugging
+        //console.log("User Input Password:", password); // Debugging
 
         const isMatch = await bcrypt.compare(password, user.password);
 
@@ -54,7 +54,7 @@ exports.login = async (req, res) => {
             { expiresIn: "7d" }
         );
 
-        console.log("Login Successful, Token Generated!");
+        //console.log("Login Successful, Token Generated!");
         res.status(200).json({ token });
 
     } catch (error) {

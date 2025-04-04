@@ -77,7 +77,7 @@ Building the backend for a **Multi-Vendor Order Management System**, where:
 | Framework          | Express.js          |
 | Database           | MongoDB + Mongoose  |
 | Auth               | JWT + Bcrypt        |
-| Dev Environment    | Postman Collection for API Testing |
+| Dev testing        | Swagger             |
 
 ---
 
@@ -125,16 +125,10 @@ npm run dev
 
 ---
 ### API Testing
-Postman Collection included in:
-/postman/collection.json
-Use Postman to test:
 
--`Authentication Routes (/api/auth)`
+Created Swagger UI for testing APIs:-
 
--`Product Routes (/api/products)`
+```bash
+http://localhost:5000/api-docs
 
--`Order Routes (/api/orders)`
-
--`Admin Analytics Routes (/api/admin)`
-
--`Vendor Analytics Routes (/api/vendor)`
+```
