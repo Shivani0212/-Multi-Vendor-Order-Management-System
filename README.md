@@ -84,11 +84,11 @@ You're building the backend for a **Multi-Vendor Order Management System**, wher
 
 ## Project Structure
 
-/controllers → Logic for Admin, Vendor, and Customer
-/models → Mongoose Schemas
-/routes → Express Routers
-/middleware → Auth
-.env → Environment variables
+`/controllers`→ Logic for Admin, Vendor, and Customer
+`/models` → Mongoose Schemas
+`/routes` → Express Routers
+`/middleware` → Auth
+`.env` → Environment variables
 
 ---
 
@@ -107,8 +107,11 @@ npm install
 ```
 ### 3. Environment Variables
 Create a .env file at the root of the project and add:
+
 -PORT=
+
 -MONGODB_URI=
+
 -JWT_SECRET=
 
 
@@ -122,12 +125,13 @@ npm run dev
 Postman Collection included in:
 /postman/collection.json
 Use Postman to test:
--Authentication Routes (/api/auth)
 
--Product Routes (/api/products)
+`-Authentication Routes (/api/auth)`
 
--Order Routes (/api/orders)
+`-Product Routes (/api/products)`
 
--Admin Analytics Routes (/api/admin)
+`-Order Routes (/api/orders)`
 
--Vendor Analytics Routes (/api/vendor)
+`-Admin Analytics Routes (/api/admin)`
+
+`-Vendor Analytics Routes (/api/vendor)`
