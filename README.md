@@ -89,7 +89,7 @@ Building the backend for a **Multi-Vendor Order Management System**, where:
 
 -`/routes` → Express Routers
 
--`/middleware` → Auth
+-`/middleware` → Auth, RBAC
 
 -`.env` → Environment variables
 
