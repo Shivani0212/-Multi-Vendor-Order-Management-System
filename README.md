@@ -107,9 +107,9 @@ npm install
 ```
 ### 3. Environment Variables
 Create a .env file at the root of the project and add:
-PORT=
-MONGODB_URI=
-JWT_SECRET=
+-PORT=
+-MONGODB_URI=
+-JWT_SECRET=
 
 
 ### 4. Run Server
@@ -117,6 +117,7 @@ JWT_SECRET=
 npm run dev
 ```
 
+---
 ### API Testing
 Postman Collection included in:
 /postman/collection.json
