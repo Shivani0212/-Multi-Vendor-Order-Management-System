@@ -6,8 +6,7 @@ This backend supports multiple roles — customers, vendors, and admins — and 
 ---
 
 ## Overview
-
-You're building the backend for a **Multi-Vendor Order Management System**, where:
+        Building the backend for a **Multi-Vendor Order Management System**, where:
 
 - Vendors can manage products.
 - Customers can place orders across multiple vendors.
@@ -25,7 +24,6 @@ You're building the backend for a **Multi-Vendor Order Management System**, wher
   - `customer`
   - `vendor`
   - `admin`
-- Middleware-based **Role-Based Access Control (RBAC)** for protected routes.
 
 ---
 
@@ -84,11 +82,11 @@ You're building the backend for a **Multi-Vendor Order Management System**, wher
 
 ## Project Structure
 
-`/controllers`→ Logic for Admin, Vendor, and Customer
-`/models` → Mongoose Schemas
-`/routes` → Express Routers
-`/middleware` → Auth
-`.env` → Environment variables
+-`/controllers`→ Logic for Admin, Vendor, and Customer
+-`/models` → Mongoose Schemas
+-`/routes` → Express Routers
+-`/middleware` → Auth
+-`.env` → Environment variables
 
 ---
 
@@ -108,11 +106,9 @@ npm install
 ### 3. Environment Variables
 Create a .env file at the root of the project and add:
 
--PORT=
-
--MONGODB_URI=
-
--JWT_SECRET=
+-`PORT=`
+-`MONGODB_URI=`
+-`JWT_SECRET=`
 
 
 ### 4. Run Server
