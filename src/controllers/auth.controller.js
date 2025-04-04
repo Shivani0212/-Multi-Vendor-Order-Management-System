@@ -2,7 +2,7 @@ const User = require("../models/user.model");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 
-// 🔹 Signup API
+// Signup API
 exports.signup = async (req, res) => {
   try {
     const { name, email, password, role } = req.body;
@@ -21,26 +21,7 @@ exports.signup = async (req, res) => {
   }
 };
 
-// 🔹 Login API
-// exports.login = async (req, res) => {
-//     try {
-//       const { email, password } = req.body;
-//       console.log("Login Request:", email, password);
-  
-//       const user = await User.findOne({ email });
-//       console.log("User Found:", user);
-  
-//       if (!user || !(await bcrypt.compare(password, user.password))) {
-//         console.log("Invalid Credentials");
-//         return res.status(400).json({ error: "Invalid credentials" });
-//       }
-  
-//       const token = jwt.sign({ id: user._id, role: user.role }, process.env.JWT_SECRET, { expiresIn: "7d" });
-//       res.status(200).json({ token });
-//     } catch (error) {
-//       res.status(500).json({ error: "Login failed" });
-//     }
-//   };
+// Login API
 exports.login = async (req, res) => {
     try {
         const { email, password } = req.body;
@@ -50,19 +31,19 @@ exports.login = async (req, res) => {
             return res.status(400).json({ error: "User not found" });
         }
 
-        console.log("🟢 Stored Hashed Password:", user.password); // Debugging
-        console.log("🟢 User Input Password:", password); // Debugging
+        console.log("Stored Hashed Password:", user.password); // Debugging
+        console.log("User Input Password:", password); // Debugging
 
         const isMatch = await bcrypt.compare(password, user.password);
 
         if (!isMatch) {
-            console.log("🔴 Password does not match!");
+            console.log("Password does not match!");
             return res.status(400).json({ error: "Invalid credentials" });
         }
 
         // Check if JWT_SECRET is properly loaded
         if (!process.env.JWT_SECRET) {
-            console.error("❌ ERROR: JWT_SECRET is missing in .env file!");
+            console.error("ERROR: JWT_SECRET is missing in .env file!");
             return res.status(500).json({ error: "Internal Server Error" });
         }
 
@@ -73,11 +54,11 @@ exports.login = async (req, res) => {
             { expiresIn: "7d" }
         );
 
-        console.log("✅ Login Successful, Token Generated!");
+        console.log("Login Successful, Token Generated!");
         res.status(200).json({ token });
 
     } catch (error) {
-        console.error("❌ Login Error:", error);
+        console.error("Login Error:", error);
         res.status(500).json({ error: "Login failed" });
     }
 };

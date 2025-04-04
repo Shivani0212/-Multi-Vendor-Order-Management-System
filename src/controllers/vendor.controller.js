@@ -2,7 +2,7 @@ const Order = require("../models/order.model");
 const Product = require("../models/product.model");
 const mongoose = require("mongoose");
 
-// 🔹 Get Daily Sales (Last 7 Days)
+// Get Daily Sales (Last 7 Days)
 exports.getDailySales = async (req, res) => {
   try {
     const vendorId = new mongoose.Types.ObjectId(req.user.id); // Ensure ObjectId
@@ -35,7 +35,7 @@ exports.getDailySales = async (req, res) => {
   }
 };
 
-// 🔹 Get Low-Stock Items
+// Get Low-Stock Items
 exports.getLowStockItems = async (req, res) => {
   try {
     const vendorId = new mongoose.Types.ObjectId(req.user.id); // Ensure ObjectId

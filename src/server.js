@@ -22,5 +22,5 @@ app.use("/api/vendor", require("./routes/vendor.routes"));
 connectDB();
 
 // Start the Server
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

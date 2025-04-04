@@ -1,23 +1,23 @@
 const mongoose = require("mongoose");
 const Product = require("../models/product.model");
 
-//🔹 Create Product API
+//Create Product API
 exports.createProduct = async (req, res) => {
   try {
-    console.log("🔹 Received Request Body:", req.body); // ✅ Debugging Log
+    console.log("Received Request Body:", req.body); // Debugging Log
 
-    // ✅ Check if `req.body` exists and contains all required fields
+    // Check if `req.body` exists and contains all required fields
     const { name, price, stock, category } = req.body;
     if (!name || !price || !stock || !category) {
       return res.status(400).json({ error: "All fields (name, price, stock, category) are required." });
     }
 
-    // ✅ Ensure only vendors can create products
+    // Ensure only vendors can create products
     if (!req.user || req.user.role !== "vendor") {
       return res.status(403).json({ error: "Only vendors can create products." });
     }
 
-    // ✅ Create new product
+    // Create new product
     const product = new Product({
       name,
       price,
@@ -27,14 +27,14 @@ exports.createProduct = async (req, res) => {
     });
 
     await product.save();
-    res.status(201).json({ message: "✅ Product created successfully", product });
+    res.status(201).json({ message: "Product created successfully", product });
   } catch (error) {
-    console.error("❌ Product Creation Error:", error);
+    console.error("Product Creation Error:", error);
     res.status(500).json({ error: "Product creation failed", details: error.message });
   }
 };
 
-// 🔹 Update Product API
+// Update Product API
 exports.updateProduct = async (req, res) => {
     try {
       const productId = req.params.id;
@@ -58,7 +58,7 @@ exports.updateProduct = async (req, res) => {
   };
   
 
-// 🔹 Delete Product API
+// Delete Product API
 exports.deleteProduct = async (req, res) => {
     try {
       // Validate product ID format

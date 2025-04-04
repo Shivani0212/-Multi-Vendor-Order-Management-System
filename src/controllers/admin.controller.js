@@ -2,7 +2,7 @@ const Order = require("../models/order.model");
 const Product = require("../models/product.model");
 const mongoose = require("mongoose");
 
-// 🔹 Get Revenue Per Vendor
+// Get Revenue Per Vendor
 exports.revenuePerVendor = async (req, res) => {
   try {
     const revenue = await Order.aggregate([
@@ -21,7 +21,7 @@ exports.revenuePerVendor = async (req, res) => {
   }
 };
 
-// 🔹 Get Top 5 Products by Sales
+// Get Top 5 Products by Sales
 exports.top5Products = async (req, res) => {
   try {
     const products = await Product.find().sort({ sales: -1 }).limit(5);
@@ -31,7 +31,7 @@ exports.top5Products = async (req, res) => {
   }
 };
 
-// 🔹 Get Average Order Value
+// Get Average Order Value
 exports.averageOrderValue = async (req, res) => {
   try {
     const avgValue = await Order.aggregate([

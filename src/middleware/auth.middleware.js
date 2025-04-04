@@ -12,15 +12,15 @@ module.exports = async (req, res, next) => {
       return res.status(401).json({ error: "Unauthorized: No token provided." });
     }
 
-    // ✅ Verify Token
+    // Verify Token
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
-    console.log("🔹 Decoded Token:", decoded);
+    console.log("Decoded Token:", decoded);
 
-    if (!decoded.id) {  // ✅ Ensure correct field
+    if (!decoded.id) {  // Ensure correct field
       return res.status(401).json({ error: "Unauthorized: Token missing user ID." });
     }
 
-    // ✅ Fetch User from Database
+    // Fetch User from Database
     const user = await User.findById(decoded.id).select("-password");
     if (!user) {
       return res.status(403).json({ error: "Forbidden: User not found." });
@@ -29,7 +29,7 @@ module.exports = async (req, res, next) => {
     req.user = user; // Attach user to request
     next();
   } catch (error) {
-    console.error("❌ Auth Middleware Error:", error);
+    console.error("Auth Middleware Error:", error);
     return res.status(401).json({ error: "Unauthorized: Token verification failed." });
   }
 };
