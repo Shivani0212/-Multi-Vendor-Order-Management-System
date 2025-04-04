@@ -7,7 +7,7 @@ This backend supports multiple roles — customers, vendors, and admins — and 
 
 ## Overview
 
-    Building the backend for a **Multi-Vendor Order Management System**, where:
+Building the backend for a **Multi-Vendor Order Management System**, where:
 
 - Vendors can manage products.
 - Customers can place orders across multiple vendors.
