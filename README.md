@@ -25,7 +25,7 @@ Building the backend for a **Multi-Vendor Order Management System**, where:
   - `customer`
   - `vendor`
   - `admin`
-
+  - Middleware-based *Role-Based Access Control (RBAC)* for protected routes.
 ---
 
 ### Product Management (Vendor Only)
