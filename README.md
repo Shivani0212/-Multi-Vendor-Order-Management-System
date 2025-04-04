@@ -1,4 +1,4 @@
-# -Multi-Vendor-Order-Management-System
+# Multi-Vendor-Order-Management-System
 
 A full-featured backend system built with **Node.js**, **Express**, and **MongoDB** to manage a **multi-vendor order management system**.  
 This backend supports multiple roles — customers, vendors, and admins — and includes smart order processing, analytics, and inventory management.
@@ -130,5 +130,10 @@ Created Swagger UI for testing APIs:-
 
 ```bash
 http://localhost:5000/api-docs
-
 ```
+or
+
+```bash
+https://multivend.onrender.com/api-docs/
+```
+
