@@ -6,7 +6,8 @@ This backend supports multiple roles — customers, vendors, and admins — and 
 ---
 
 ## Overview
-        Building the backend for a **Multi-Vendor Order Management System**, where:
+
+    Building the backend for a **Multi-Vendor Order Management System**, where:
 
 - Vendors can manage products.
 - Customers can place orders across multiple vendors.
@@ -83,9 +84,13 @@ This backend supports multiple roles — customers, vendors, and admins — and 
 ## Project Structure
 
 -`/controllers`→ Logic for Admin, Vendor, and Customer
+
 -`/models` → Mongoose Schemas
+
 -`/routes` → Express Routers
+
 -`/middleware` → Auth
+
 -`.env` → Environment variables
 
 ---
@@ -107,7 +112,9 @@ npm install
 Create a .env file at the root of the project and add:
 
 -`PORT=`
+
 -`MONGODB_URI=`
+
 -`JWT_SECRET=`
 
 
@@ -122,12 +129,12 @@ Postman Collection included in:
 /postman/collection.json
 Use Postman to test:
 
-`-Authentication Routes (/api/auth)`
+-`Authentication Routes (/api/auth)`
 
-`-Product Routes (/api/products)`
+-`Product Routes (/api/products)`
 
-`-Order Routes (/api/orders)`
+-`Order Routes (/api/orders)`
 
-`-Admin Analytics Routes (/api/admin)`
+-`Admin Analytics Routes (/api/admin)`
 
-`-Vendor Analytics Routes (/api/vendor)`
+-`Vendor Analytics Routes (/api/vendor)`
